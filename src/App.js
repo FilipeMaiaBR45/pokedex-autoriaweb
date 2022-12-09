@@ -1,22 +1,18 @@
+import Home from "./pages/Home";
+import Detalhes from "./pages/Detalhes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DetailPokemonProvider } from "./contexts/DetailPokemon";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DetailPokemonProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detalhes" element={<Detalhes />} />
+        </Routes>
+      </BrowserRouter>
+    </DetailPokemonProvider>
   );
 }
 

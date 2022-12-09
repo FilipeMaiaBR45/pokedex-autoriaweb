@@ -1,6 +1,13 @@
+import { useState, useEffect, useContext } from "react";
+
+
 function Detalhes(){
+
+
 return(
-  <p>davi eh gay</p>
+  <>
+  
+  </>
 );
 }
 
