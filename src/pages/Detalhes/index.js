@@ -35,7 +35,7 @@ function Detalhes() {
 
   return (
     <Card style={{ width: "18rem" }}>
-      
+      <Card.Img src={pokemonData.sprites?.front_default}/>
       <Card.Title>Name: {pokemonData.name}</Card.Title>
       
     </Card>
